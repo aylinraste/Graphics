@@ -36,6 +36,8 @@ public class BallAnimation extends Transition {
         double dy = speed * Math.sin(Math.toRadians(theta)) * (-1);
         ball.move(dx, dy);
         if (ball.hitCuphead()) {
+            if (cuphead.getHeart() <= 0)
+                return;
             explode();
             this.stop();
         }

@@ -50,10 +50,10 @@ public class MiniBossAnimation extends Transition {
         if (miniBosses.size() != 0 && miniBoss.hitCuphead()) {
             miniBosses.remove(miniBoss);
             this.stop();
-            explode();
             if (cuphead.getHeart() <= 0) {
-                this.stop();
+                return;
             }
+            explode();
         }
     }
     public void explode(){

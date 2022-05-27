@@ -51,7 +51,6 @@ public class GameView implements Initializable {
     }
 
     public void run() throws FileNotFoundException {
-        System.out.println("restart");
         background();
         game = new Game(pane);
         EndView.setIsCalled(false);

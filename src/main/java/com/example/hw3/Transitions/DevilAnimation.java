@@ -44,7 +44,10 @@ public class DevilAnimation extends DevilAndBossAnimation {
             miniBoss(v);
         boss.setImage(new Image(HelloApplication.class.getResource(address).toExternalForm()));
         boss.move(dx, dy);
-       checkHit();
+        if (cuphead.getHeart() <= 0) {
+            this.stop();
+        }
+        checkHit();
         if (isDead) {
             this.stop();
             pane.getChildren().remove(boss);

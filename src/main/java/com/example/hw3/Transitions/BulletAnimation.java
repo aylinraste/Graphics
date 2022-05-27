@@ -56,6 +56,8 @@ public class BulletAnimation extends Transition {
             miniBosses.get(0).setLife(miniBosses.get(0).getLife() - 50);
             if (miniBosses.get(0).getLife() <= 0) {
                 pane.getChildren().remove(miniBosses.get(0));
+//                miniBosses.get(0).setX(1000);
+//                miniBosses.get(0).setY(1000);
                 game.setScore(game.getScore() + 1);
                 miniBosses.remove(0);
             }

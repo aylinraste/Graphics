@@ -44,6 +44,9 @@ public class BossAnimation extends DevilAndBossAnimation {
             miniBoss(v);
         boss.setImage(new Image(HelloApplication.class.getResource(address).toExternalForm()));
         boss.move(dx, dy);
+        if (cuphead.getHeart() <= 0) {
+            this.stop();
+        }
         checkHit();
         if (isDead) {
             DevilAnimation devilAnimation = new DevilAnimation(game);
